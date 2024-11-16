@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Online Cricket Store Checkout</h1>
+    <!--Form fields to be displayed in the frontend -->
+    <form action="/submit" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Name" name="name" required><br><br>
+        
+        <label for="address">Address:</label>
+        <input type="text" id="address" placeholder="Address" name="address" required><br><br>
+        
+        <label for="city">City:</label>
+        <input type="text" id="city" placeholder="City" name="city" required><br><br>
+        
+        <label for="province">Province:</label>
+        <select id="province" name="province" required>
+            <option value="">Select Province</option>
+            <option value="ON">Ontario</option>
+            <option value="QC">Quebec</option>
+            <option value="BC">British Columbia</option>
+            <option value="AB">Alberta</option>
+            <option value="MB">Manitoba</option>
+            <option value="SK">Saskatchewan</option>
+            <option value="NS">Nova Scotia</option>
+            <option value="NB">New Brunswick</option>
+            <option value="NL">Newfoundland and Labrador</option>
+            <option value="PE">Prince Edward Island</option>
+            <option value="NT">Northwest Territories</option>
+            <option value="NU">Nunavut</option>
+            <option value="YT">Yukon</option>
+        </select><br><br>
+        
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" placeholder="Phone 123-456-1234" name="phone" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Email" name="email" required><br><br>
+        
+        <h3>Products</h3>
+        <input type="checkbox" name="product" value="1"> Cricket ball - $5<br>
+        <input type="checkbox" name="product" value="2"> Cricket bat - $7<br>
+        <input type="checkbox" name="product" value="3"> Helmet - $3<br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+</body>
+</html>

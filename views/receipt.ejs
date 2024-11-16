@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Receipt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="receipt-body">
+    <div class="output-section">
+        <!--Displaying the Receipt output on the frontend -->
+        <h1>Receipt</h1>
+        <p><strong>Name:</strong> <%= name %></p>
+        <!--  <%= %>: This is the EJS syntax to output the value of a variable. The variables are passed from the server-side code-->
+        <p><strong>Address:</strong> <%= address %></p>
+        <p><strong>City:</strong> <%= city %></p>
+        <p><strong>Province:</strong> <%= province %></p>
+        <p><strong>Phone:</strong> <%= phone %></p>
+        <p><strong>Email:</strong> <%= email %></p>
+    
+        <h2>Purchased Items</h2>
+        <ul>
+            <% purchasedItems.forEach(item => { %>
+             <li><%= item.name %> - $<%= item.price %></li>
+            <% }); %>
+        </ul>
+    
+        <p><strong>Subtotal:</strong> $<%= total.toFixed(2) %></p>
+        <p><strong>Tax:</strong> $<%= tax.toFixed(2) %></p>
+        <p><strong>Total:</strong> $<%= grandTotal.toFixed(2) %></p>
+    </div>
+</body>
+</html>
